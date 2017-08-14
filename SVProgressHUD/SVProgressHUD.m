@@ -1203,6 +1203,7 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 -(UIView *)backgroundView {
     if(!_backgroundView){
         _backgroundView = [UIView new];
+        _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     if(!_backgroundView.superview){
         [self insertSubview:_backgroundView belowSubview:self.hudView];
